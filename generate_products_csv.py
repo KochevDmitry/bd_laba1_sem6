@@ -32,7 +32,7 @@ while len(PRODUCTS) < 50:
     price = random.randint(500, 100000)
     PRODUCTS.append((name, category, price))
 
-with open("products.csv", "w", newline="", encoding="utf-8") as f:
+with open("./init_data/products.csv", "w", newline="", encoding="utf-8") as f:
     writer = csv.writer(f)
     for i, (name, category, price) in enumerate(PRODUCTS, start=1):
         stock = random.randint(10, 1000)
