@@ -6,7 +6,7 @@ CITIES = ["Москва", "Санкт-Петербург", "Казань", "Ек
 def random_club_name():
     return random.choice(["Фитнес Клуб", "Спорт Лайф", "Энерджи", "Тонус", "Атлетик", "BodyFit", "PowerZone", "ProGym", "Flexx", "Iron Club"]) + " " + str(random.randint(1, 99))
 
-with open("clubs.csv", "w", newline="", encoding="utf-8") as f:
+with open("./init_data/clubs.csv", "w", newline="", encoding="utf-8") as f:
     writer = csv.writer(f)
     for i in range(1, 51):
         name = random_club_name()
