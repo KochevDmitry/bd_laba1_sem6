@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  postgres:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: bd_laba_1
+    environment:
+      POSTGRES_USER: postgre
+      POSTGRES_PASSWORD: postgre
+      POSTGRES_DB: bd_laba_1
+    ports:
+      - "5433:5432"
+    volumes:
+      - ./init_data:/init_data
+      - ./init_data/init_scripts:/docker-entrypoint-initdb.d 
+volumes:
+  pgdata:
