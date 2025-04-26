@@ -11,7 +11,7 @@ PRODUCTS = [('Гантели', 'Силовое', 1500), ('Штанга', 'Сил
 def random_date(i):
     return (START_DATE + timedelta(days=i // 1000)).date()
 
-with open("sales_data.csv", "w", newline="", encoding="utf-8") as f:
+with open("./init_data/sales_data.csv", "w", newline="", encoding="utf-8") as f:
     writer = csv.writer(f)
     for i in range(NUM_ROWS):
         sale_date = random_date(i)
